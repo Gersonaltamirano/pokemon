@@ -48,6 +48,7 @@ function obtenerPokemons(){
     .then(function(pokemon) {
         // console.log(pokemon.moves[0].move);
         let numero_ataques = pokemon.moves.length;
+        let ataques = pokemon.moves;
         let ataque_aleatorio = Math.floor(Math.random() * (numero_ataques ));
         let nombre_ataque = pokemon.moves[ataque_aleatorio].move.name;
         // let nombre_url = pokemon.moves[ataque_aleatorio].move.url;
@@ -57,6 +58,7 @@ function obtenerPokemons(){
 
         pokemon1 = {
             nombre: pokemon.name,
+            ataques: ataques,
             nombre_ataque: nombre_ataque,
             poder_ataque: poder_ataque,
             Puntos_vida: SP,
@@ -90,6 +92,7 @@ function obtenerPokemons(){
     })
     .then(function(pokemon) {
         let numero_ataques = pokemon.moves.length;
+        let ataques = pokemon.moves;
         let ataque_aleatorio = Math.floor(Math.random() * (numero_ataques )) ;
         let nombre_ataque = pokemon.moves[ataque_aleatorio].move.name;
         // let nombre_url = pokemon.moves[ataque_aleatorio].move.url;
@@ -99,6 +102,7 @@ function obtenerPokemons(){
 
         pokemon2 = {
             nombre: pokemon.name,
+            ataques: ataques,
             nombre_ataque: nombre_ataque,
             poder_ataque: poder_ataque,
             Puntos_vida: SP,
